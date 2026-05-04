@@ -1,0 +1,24 @@
+# Local/editor files
+.claude/
+.vscode/
+.idea/
+Thumbs.db
+Desktop.ini
+
+# Older unrelated site files kept locally
+ai-chatbot-business/
+about.html
+captain-tractor.html
+contact.html
+golden-lion-tractors.html
+index-real-estate-backup.html
+mcat-tracker.html
+mcat_data.json
+mcat_tracker.py
+nul
+properties.html
+script.js
+styles.css
+tensorflow.ex.py
+toronto-skyline.jpg
+

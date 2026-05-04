@@ -1,0 +1,1467 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Golden Lion Tractors | Reliable Tractors. Stronger Farms.</title>
+    <meta name="description" content="Golden Lion Tractors is a premium tractor company offering quality machinery, service, parts, delivery support, and financing assistance.">
+    <link rel="preconnect" href="https://images.unsplash.com">
+    <link rel="preconnect" href="https://source.unsplash.com">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        :root {
+            --black: #0f1112;
+            --charcoal: #1a1d1f;
+            --ink: #202326;
+            --muted: #667077;
+            --paper: #f5f2eb;
+            --white: #ffffff;
+            --line: #ded8cc;
+            --gold: #c99823;
+            --gold-light: #efd27a;
+            --gold-soft: #f6ead0;
+            --shadow: 0 24px 70px rgba(15, 17, 18, 0.16);
+            --radius: 22px;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            background: var(--paper);
+            color: var(--ink);
+            font-family: -apple-system, BlinkMacSystemFont, "SF Pro Display", "SF Pro Text", "Helvetica Neue", Helvetica, Arial, sans-serif;
+            line-height: 1.55;
+        }
+
+        img {
+            display: block;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        a {
+            color: inherit;
+            text-decoration: none;
+        }
+
+        button,
+        input,
+        select,
+        textarea {
+            font: inherit;
+        }
+
+        button,
+        a,
+        input,
+        select,
+        textarea {
+            outline-color: var(--gold);
+            outline-offset: 3px;
+        }
+
+        .container {
+            width: min(1180px, calc(100% - 36px));
+            margin: 0 auto;
+        }
+
+        .site-header {
+            position: sticky;
+            top: 0;
+            z-index: 40;
+            background: rgba(15, 17, 18, 0.08);
+            border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+            backdrop-filter: blur(18px);
+            transition: background 0.25s ease, border-color 0.25s ease, box-shadow 0.25s ease;
+        }
+
+        body.is-scrolled .site-header {
+            background: rgba(255, 255, 255, 0.9);
+            border-bottom-color: rgba(15, 17, 18, 0.08);
+            box-shadow: 0 12px 34px rgba(15, 17, 18, 0.08);
+        }
+
+        .nav {
+            min-height: 72px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 24px;
+        }
+
+        .brand {
+            display: flex;
+            align-items: center;
+            gap: 14px;
+            min-width: 238px;
+        }
+
+        .brand-logo {
+            width: 82px;
+            height: 56px;
+            background: var(--white);
+            border: 1px solid var(--line);
+            border-radius: 14px;
+            box-shadow: 0 10px 26px rgba(15, 17, 18, 0.08);
+            overflow: hidden;
+        }
+
+        .brand-logo img {
+            object-fit: contain;
+            padding: 7px;
+        }
+
+        .brand-name {
+            display: grid;
+            color: var(--white);
+            font-weight: 950;
+            line-height: 1.05;
+            text-transform: uppercase;
+        }
+
+        body.is-scrolled .brand-name {
+            color: var(--black);
+        }
+
+        .brand-name span:last-child {
+            color: var(--gold);
+            font-size: 0.86rem;
+        }
+
+        .nav-links {
+            display: flex;
+            align-items: center;
+            gap: 24px;
+            color: rgba(255, 255, 255, 0.86);
+            font-size: 0.94rem;
+            font-weight: 850;
+        }
+
+        body.is-scrolled .nav-links {
+            color: #3f464b;
+        }
+
+        .nav-links a {
+            transition: color 0.2s ease;
+        }
+
+        .nav-links a:hover {
+            color: var(--gold);
+        }
+
+        .nav-cta {
+            margin-left: auto;
+        }
+
+        .menu-toggle {
+            display: none;
+            width: 48px;
+            height: 48px;
+            border: 1px solid var(--line);
+            border-radius: 12px;
+            background: var(--white);
+            color: var(--black);
+        }
+
+        .mobile-menu {
+            display: none;
+            border-top: 1px solid var(--line);
+            background: rgba(255, 255, 255, 0.96);
+            color: var(--black);
+            border-radius: 0 0 18px 18px;
+            padding: 12px 0 18px;
+        }
+
+        .mobile-menu a {
+            display: block;
+            padding: 10px 0;
+            font-weight: 850;
+        }
+
+        .btn {
+            min-height: 48px;
+            border: 0;
+            border-radius: 999px;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+            padding: 0 19px;
+            cursor: pointer;
+            font-weight: 900;
+            transition: transform 0.2s ease, box-shadow 0.2s ease, background 0.2s ease, color 0.2s ease;
+            white-space: nowrap;
+        }
+
+        .btn:hover {
+            transform: translateY(-2px);
+        }
+
+        .btn-primary {
+            background: linear-gradient(135deg, var(--gold-light), var(--gold));
+            color: var(--black);
+            box-shadow: 0 16px 32px rgba(201, 152, 35, 0.28);
+        }
+
+        .btn-dark {
+            background: var(--black);
+            color: var(--white);
+        }
+
+        .btn-light {
+            background: var(--white);
+            color: var(--black);
+        }
+
+        .btn-outline {
+            background: transparent;
+            color: var(--black);
+            border: 1px solid rgba(15, 17, 18, 0.16);
+        }
+
+        .section {
+            padding: 100px 0;
+            position: relative;
+        }
+
+        .section-head {
+            display: flex;
+            align-items: end;
+            justify-content: space-between;
+            gap: 36px;
+            margin-bottom: 42px;
+        }
+
+        .eyebrow {
+            color: var(--gold);
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            font-size: 0.78rem;
+            font-weight: 950;
+            letter-spacing: 0;
+            margin-bottom: 14px;
+            text-transform: uppercase;
+        }
+
+        .eyebrow::before {
+            content: "";
+            width: 36px;
+            height: 2px;
+            background: currentColor;
+        }
+
+        h1,
+        h2,
+        h3 {
+            letter-spacing: 0;
+        }
+
+        h1 {
+            max-width: 820px;
+            font-size: 5.7rem;
+            line-height: 0.94;
+            margin-bottom: 24px;
+        }
+
+        h2 {
+            max-width: 760px;
+            font-size: 3.3rem;
+            line-height: 1;
+        }
+
+        .lead {
+            max-width: 640px;
+            color: var(--muted);
+            font-size: 1.1rem;
+        }
+
+        .hero {
+            min-height: 100vh;
+            color: var(--white);
+            display: grid;
+            align-items: end;
+            overflow: hidden;
+            background:
+                linear-gradient(90deg, rgba(15, 17, 18, 0.88), rgba(15, 17, 18, 0.45), rgba(15, 17, 18, 0.18)),
+                url("https://images.unsplash.com/photo-1605000797499-95a51c5269ae?auto=format&fit=crop&w=1900&q=84") center / cover;
+            position: relative;
+            margin-top: -72px;
+            padding-top: 72px;
+        }
+
+        .hero-video {
+            position: absolute;
+            inset: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            z-index: 0;
+        }
+
+        .hero::before {
+            content: "";
+            position: absolute;
+            inset: 0;
+            z-index: 1;
+            background:
+                linear-gradient(90deg, rgba(15, 17, 18, 0.86), rgba(15, 17, 18, 0.46), rgba(15, 17, 18, 0.18)),
+                linear-gradient(0deg, rgba(15, 17, 18, 0.72), transparent 48%);
+        }
+
+        .hero .container {
+            position: relative;
+            z-index: 2;
+            padding: 96px 0 84px;
+        }
+
+        .hero p {
+            max-width: 620px;
+            color: rgba(255, 255, 255, 0.82);
+            font-size: 1.16rem;
+        }
+
+        .hero-actions {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 12px;
+            margin-top: 30px;
+        }
+
+        .intro-grid,
+        .about-grid,
+        .detail-grid,
+        .contact-grid {
+            display: grid;
+            grid-template-columns: minmax(0, 0.9fr) minmax(0, 1.1fr);
+            gap: 48px;
+            align-items: center;
+        }
+
+        .image-panel {
+            min-height: 560px;
+            border-radius: var(--radius);
+            overflow: hidden;
+            box-shadow: var(--shadow);
+            background: #d8d1c5;
+        }
+
+        .text-stack {
+            display: grid;
+            gap: 22px;
+        }
+
+        .story-section {
+            background: var(--black);
+            color: var(--white);
+            padding: 0;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .story-section::after {
+            content: "";
+            position: absolute;
+            inset: 0;
+            z-index: 1;
+            pointer-events: none;
+            background:
+                linear-gradient(90deg, rgba(15, 17, 18, 0.16), rgba(15, 17, 18, 0.68)),
+                linear-gradient(180deg, rgba(15, 17, 18, 0.22), rgba(15, 17, 18, 0.58));
+        }
+
+        .story-bg-video {
+            position: absolute;
+            inset: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            z-index: 0;
+            filter: saturate(1.04) contrast(1.05);
+        }
+
+        .story-layout {
+            display: grid;
+            grid-template-columns: minmax(0, 1.05fr) minmax(360px, 0.95fr);
+            gap: 0;
+            min-height: 220vh;
+            position: relative;
+            z-index: 2;
+        }
+
+        .story-visual {
+            position: sticky;
+            top: 72px;
+            height: calc(100vh - 72px);
+            overflow: hidden;
+            pointer-events: none;
+        }
+
+        .story-copy {
+            display: grid;
+            align-content: start;
+            gap: 32vh;
+            padding: 28vh min(6vw, 76px) 28vh;
+        }
+
+        .story-panel {
+            min-height: 260px;
+            border: 1px solid rgba(255, 255, 255, 0.14);
+            border-radius: 28px;
+            background: rgba(15, 17, 18, 0.58);
+            backdrop-filter: blur(18px);
+            box-shadow: 0 28px 80px rgba(0, 0, 0, 0.28);
+            padding: 34px;
+            display: grid;
+            align-content: center;
+        }
+
+        .story-panel h2 {
+            font-size: 3rem;
+        }
+
+        .value-row {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 16px;
+        }
+
+        .value-row.values-two {
+            grid-template-columns: 1fr 1fr;
+        }
+
+        .value-row.values-three {
+            grid-template-columns: repeat(3, 1fr);
+        }
+
+        .value-card,
+        .service-card,
+        .catalog-card,
+        .detail-panel,
+        .contact-card,
+        .form-card {
+            background: var(--white);
+            border: 1px solid var(--line);
+            border-radius: var(--radius);
+            box-shadow: 0 14px 40px rgba(15, 17, 18, 0.08);
+        }
+
+        .value-card {
+            min-height: 220px;
+            padding: 24px;
+        }
+
+        .value-card i,
+        .service-card i {
+            width: 48px;
+            height: 48px;
+            border-radius: 16px;
+            display: grid;
+            place-items: center;
+            background: var(--gold-soft);
+            color: var(--black);
+            margin-bottom: 18px;
+        }
+
+        .value-card p,
+        .service-card p,
+        .catalog-card p,
+        .detail-panel p {
+            color: var(--muted);
+        }
+
+        .featured-story {
+            background: var(--black);
+            color: var(--white);
+            overflow: hidden;
+        }
+
+        .featured-item {
+            min-height: 620px;
+            display: grid;
+            grid-template-columns: minmax(0, 1.15fr) minmax(360px, 0.85fr);
+            gap: 42px;
+            align-items: center;
+            padding: 44px 0;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .featured-item:last-child {
+            border-bottom: 0;
+        }
+
+        .featured-image {
+            height: 500px;
+            border-radius: var(--radius);
+            overflow: hidden;
+            box-shadow: 0 34px 90px rgba(0, 0, 0, 0.34);
+        }
+
+        .spec-pills {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            margin: 20px 0 26px;
+        }
+
+        .pill {
+            display: inline-flex;
+            align-items: center;
+            min-height: 32px;
+            border-radius: 999px;
+            padding: 0 12px;
+            background: rgba(255, 255, 255, 0.1);
+            color: rgba(255, 255, 255, 0.78);
+            font-size: 0.84rem;
+            font-weight: 850;
+        }
+
+        .pill-gold {
+            background: var(--gold-soft);
+            color: var(--black);
+        }
+
+        .filters {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 14px;
+            margin-bottom: 24px;
+            background: var(--white);
+            border: 1px solid var(--line);
+            border-radius: var(--radius);
+            padding: 16px;
+            box-shadow: var(--shadow);
+        }
+
+        .field {
+            display: grid;
+            gap: 7px;
+        }
+
+        .field label {
+            color: #4b5054;
+            font-size: 0.78rem;
+            font-weight: 950;
+            text-transform: uppercase;
+        }
+
+        .field input,
+        .field select,
+        .field textarea {
+            width: 100%;
+            min-height: 48px;
+            border: 1px solid var(--line);
+            border-radius: 14px;
+            background: #fdfbf7;
+            color: var(--ink);
+            padding: 0 14px;
+        }
+
+        .field textarea {
+            min-height: 132px;
+            padding-top: 13px;
+            resize: vertical;
+        }
+
+        .catalog-grid,
+        .services-grid,
+        .related-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 18px;
+        }
+
+        .catalog-grid.single-product {
+            grid-template-columns: minmax(0, 760px);
+        }
+
+        .catalog-card {
+            overflow: hidden;
+            transition: transform 0.2s ease, box-shadow 0.2s ease;
+        }
+
+        .catalog-card:hover {
+            transform: translateY(-6px);
+            box-shadow: 0 24px 60px rgba(15, 17, 18, 0.16);
+        }
+
+        .catalog-image {
+            height: 360px;
+            background: #d8d1c5;
+        }
+
+        .catalog-body {
+            padding: 22px;
+        }
+
+        .catalog-body h3 {
+            font-size: 1.22rem;
+            line-height: 1.2;
+            margin-bottom: 12px;
+        }
+
+        .catalog-meta {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            border-top: 1px solid var(--line);
+            border-bottom: 1px solid var(--line);
+            margin: 14px 0;
+        }
+
+        .catalog-meta div {
+            padding: 10px 8px;
+            border-right: 1px solid var(--line);
+        }
+
+        .catalog-meta div:last-child {
+            border-right: 0;
+        }
+
+        .catalog-meta span {
+            display: block;
+            color: var(--muted);
+            font-size: 0.72rem;
+            font-weight: 950;
+            text-transform: uppercase;
+        }
+
+        .price-row {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 12px;
+            margin: 16px 0;
+        }
+
+        .detail-section {
+            background: linear-gradient(180deg, #fffdf8, var(--paper));
+        }
+
+        .gallery {
+            display: grid;
+            grid-template-columns: 1fr 0.42fr;
+            gap: 14px;
+            min-height: 560px;
+        }
+
+        .gallery-main,
+        .gallery-side div {
+            border-radius: var(--radius);
+            overflow: hidden;
+            box-shadow: var(--shadow);
+            background: #d8d1c5;
+        }
+
+        .gallery-side {
+            display: grid;
+            gap: 14px;
+        }
+
+        .detail-panel {
+            padding: 28px;
+        }
+
+        .detail-panel h3 {
+            font-size: 2rem;
+            line-height: 1.08;
+            margin: 12px 0;
+        }
+
+        .spec-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 22px 0;
+        }
+
+        .spec-table th,
+        .spec-table td {
+            border-bottom: 1px solid var(--line);
+            padding: 12px 0;
+            text-align: left;
+        }
+
+        .spec-table th {
+            color: var(--muted);
+            width: 44%;
+        }
+
+        .services-grid {
+            grid-template-columns: repeat(2, 1fr);
+        }
+
+        .service-card {
+            padding: 24px;
+            min-height: 190px;
+        }
+
+        .services-layout {
+            display: grid;
+            grid-template-columns: minmax(0, 1.08fr) minmax(360px, 0.92fr);
+            gap: 26px;
+            align-items: stretch;
+        }
+
+        .services-visual {
+            min-height: 620px;
+            border-radius: var(--radius);
+            overflow: hidden;
+            box-shadow: var(--shadow);
+            margin-top: 0;
+        }
+
+        .cta {
+            background:
+                linear-gradient(90deg, rgba(15, 17, 18, 0.92), rgba(15, 17, 18, 0.52)),
+                url("https://source.unsplash.com/6MYkr822DvY/1600x900") center / cover;
+            color: var(--white);
+            padding: 88px 0;
+        }
+
+        .cta-inner {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 28px;
+        }
+
+        .contact-card,
+        .form-card {
+            padding: 28px;
+        }
+
+        .contact-list {
+            display: grid;
+            gap: 18px;
+            margin-top: 24px;
+        }
+
+        .contact-item {
+            display: grid;
+            grid-template-columns: 40px 1fr;
+            gap: 12px;
+            color: var(--muted);
+        }
+
+        .contact-item i {
+            color: var(--gold);
+            margin-top: 4px;
+        }
+
+        .form-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 16px;
+        }
+
+        .full {
+            grid-column: 1 / -1;
+        }
+
+        .map-placeholder {
+            height: 240px;
+            border-radius: var(--radius);
+            margin-top: 22px;
+            background:
+                linear-gradient(135deg, rgba(15, 17, 18, 0.82), rgba(15, 17, 18, 0.48)),
+                url("https://images.unsplash.com/photo-1524661135-423995f22d0b?auto=format&fit=crop&w=1200&q=80") center / cover;
+            color: var(--white);
+            display: grid;
+            place-items: center;
+            text-align: center;
+            padding: 20px;
+        }
+
+        .reveal {
+            opacity: 0;
+            transform: translateY(28px);
+            transition: opacity 0.7s ease, transform 0.7s ease;
+        }
+
+        .reveal.is-visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        .parallax-img {
+            transition: transform 0.7s ease;
+        }
+
+        .image-panel:hover .parallax-img,
+        .featured-image:hover .parallax-img,
+        .catalog-image:hover .parallax-img {
+            transform: scale(1.04);
+        }
+
+        footer {
+            background: var(--black);
+            color: var(--white);
+            padding: 58px 0 26px;
+        }
+
+        .footer-grid {
+            display: grid;
+            grid-template-columns: 1.2fr 1fr 1fr;
+            gap: 34px;
+            margin-bottom: 34px;
+        }
+
+        .footer-logo {
+            width: 132px;
+            height: 96px;
+            object-fit: contain;
+            background: var(--white);
+            border-radius: 16px;
+            margin-bottom: 16px;
+        }
+
+        footer p,
+        footer li {
+            color: rgba(255, 255, 255, 0.66);
+            list-style: none;
+            margin-bottom: 8px;
+        }
+
+        .copyright {
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            color: rgba(255, 255, 255, 0.48);
+            padding-top: 22px;
+            font-size: 0.9rem;
+        }
+
+        @media (max-width: 1040px) {
+            .nav-links {
+                display: none;
+            }
+
+            .nav-cta {
+                display: none;
+            }
+
+            .menu-toggle {
+                display: inline-grid;
+                place-items: center;
+            }
+
+            .mobile-menu.is-open {
+                display: block;
+            }
+
+            .intro-grid,
+            .about-grid,
+            .detail-grid,
+            .contact-grid,
+            .featured-item,
+            .story-layout,
+            .services-layout {
+                grid-template-columns: 1fr;
+            }
+
+            .story-layout {
+                min-height: auto;
+            }
+
+            .story-visual {
+                position: relative;
+                top: auto;
+                height: 56vh;
+            }
+
+            .story-copy {
+                gap: 28px;
+                padding: 36px 18px 70px;
+            }
+
+            .value-row,
+            .value-row.values-two,
+            .value-row.values-three,
+            .catalog-grid,
+            .services-grid,
+            .related-grid,
+            .footer-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .filters {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            h1 {
+                font-size: 4.3rem;
+            }
+
+            h2 {
+                font-size: 2.7rem;
+            }
+        }
+
+        @media (max-width: 680px) {
+            .container {
+                width: min(100% - 28px, 1180px);
+            }
+
+            .nav {
+                min-height: 78px;
+            }
+
+            .brand {
+                min-width: 0;
+            }
+
+            .brand-logo {
+                width: 76px;
+                height: 54px;
+            }
+
+            .brand-name {
+                font-size: 0.88rem;
+            }
+
+            h1 {
+                font-size: 3.25rem;
+            }
+
+            h2 {
+                font-size: 2.25rem;
+            }
+
+            .hero {
+                min-height: 720px;
+            }
+
+            .value-row,
+            .value-row.values-two,
+            .value-row.values-three,
+            .catalog-grid,
+            .services-grid,
+            .related-grid,
+            .filters,
+            .footer-grid,
+            .form-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .section-head,
+            .cta-inner {
+                display: grid;
+                align-items: start;
+            }
+
+            .section {
+                padding: 70px 0;
+            }
+
+            .gallery {
+                grid-template-columns: 1fr;
+                min-height: auto;
+            }
+
+            .gallery-main,
+            .gallery-side div,
+            .image-panel,
+            .featured-image {
+                min-height: 280px;
+                height: auto;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header class="site-header">
+        <div class="container nav">
+            <a class="brand" href="#home" aria-label="Golden Lion Tractors home">
+                <span class="brand-logo"><img src="assets/golden-lion-logo.png" alt="Golden Lion Tractors logo"></span>
+                <span class="brand-name"><span>Golden Lion</span><span>Tractors</span></span>
+            </a>
+            <nav class="nav-links" aria-label="Main navigation">
+                <a href="#home">Home</a>
+                <a href="#about">About</a>
+                <a href="#catalog">Product Catalog</a>
+                <a href="#services">Services</a>
+                <a href="#contact">Contact Us</a>
+            </nav>
+            <a class="btn btn-primary nav-cta" href="#contact">Contact Us</a>
+            <button class="menu-toggle" id="menu-toggle" type="button" aria-label="Open navigation">
+                <i class="fa-solid fa-bars"></i>
+            </button>
+        </div>
+        <div class="container mobile-menu" id="mobile-menu">
+            <a href="#home">Home</a>
+            <a href="#about">About</a>
+            <a href="#catalog">Product Catalog</a>
+            <a href="#services">Services</a>
+            <a href="#contact">Contact Us</a>
+        </div>
+    </header>
+
+    <main>
+        <section class="hero" id="home">
+            <video class="hero-video" autoplay muted loop playsinline poster="https://images.unsplash.com/photo-1605000797499-95a51c5269ae?auto=format&fit=crop&w=1900&q=84">
+                <source src="assets/golden-lion-hero.mp4" type="video/mp4">
+            </video>
+            <div class="container reveal">
+                <p class="eyebrow">Premium tractor machinery</p>
+                <h1>Your Property.<br> Our Expertise.</h1>
+                <p>Premium equipment, trusted support, and machinery built for real work.</p>
+                <div class="hero-actions">
+                    <a class="btn btn-primary" href="#catalog">View Product Catalog</a>
+                    <a class="btn btn-light" href="#contact">Contact Us</a>
+                </div>
+            </div>
+        </section>
+
+        <section class="story-section" id="intro">
+            <video class="story-bg-video" autoplay muted loop playsinline preload="metadata">
+                <source src="assets/who-we-serve-bg.mp4" type="video/mp4">
+            </video>
+            <div class="story-layout">
+                <div class="story-visual" aria-hidden="true"></div>
+                <div class="story-copy">
+                    <article class="story-panel reveal">
+                        <p class="eyebrow">Who we serve</p>
+                        <h2>Built for farms, contractors, and landowners.</h2>
+                    </article>
+                    <article class="story-panel reveal">
+                        <p class="eyebrow">Inventory</p>
+                        <h2>Carefully selected machinery for real conditions.</h2>
+                    </article>
+                    <article class="story-panel reveal">
+                        <p class="eyebrow">Support</p>
+                        <h2>With you at every step.</h2>
+                    </article>
+                    <article class="story-panel reveal">
+                        <p class="eyebrow">Guidance</p>
+                        <h2>Simple advice from first quote to final handoff.</h2>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <section class="featured-story section">
+            <div class="container">
+                <div class="section-head reveal">
+                    <div>
+                        <p class="eyebrow">Featured tractors</p>
+                        <h2>Focused machines for real work.</h2>
+                    </div>
+                    <p>Large imagery, essential specs, and a clear path to details.</p>
+                </div>
+
+                <article class="featured-item reveal">
+                    <div class="featured-image">
+                        <img class="parallax-img" src="assets/captain-2532-field.jpeg" alt="Captain 2532 tractor with loader in a farm field">
+                    </div>
+                    <div>
+                        <p class="eyebrow">Compact tractor</p>
+                        <h2>2026 Captain 2532 Tractor</h2>
+                        <div class="spec-pills">
+                            <span class="pill">25 HP</span>
+                            <span class="pill">2026</span>
+                            <span class="pill">New</span>
+                            <span class="pill">Starting at $25,999</span>
+                        </div>
+                        <div class="hero-actions">
+                            <a class="btn btn-primary" href="#detail">View Details</a>
+                            <a class="btn btn-light" href="#contact">Request Info</a>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="featured-item reveal">
+                    <div class="featured-image">
+                        <img class="parallax-img" src="assets/captain-2532-black.jpeg" alt="Captain 2532 black tractor side profile">
+                    </div>
+                    <div>
+                        <p class="eyebrow">Built for control</p>
+                        <h2>Hydrostatic 3-range transmission.</h2>
+                        <div class="spec-pills">
+                            <span class="pill">Low / Medium / High</span>
+                            <span class="pill">4WD</span>
+                            <span class="pill">Power steering</span>
+                            <span class="pill">21 km/h max speed</span>
+                        </div>
+                        <div class="hero-actions">
+                            <a class="btn btn-primary" href="#catalog">View Catalog</a>
+                            <a class="btn btn-light" href="#contact">Request Info</a>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="featured-item reveal">
+                    <div class="featured-image">
+                        <img class="parallax-img" src="assets/captain-2532-snowblower-close.png" alt="Captain 2532 tractor clearing snow with a snowblower attachment">
+                    </div>
+                    <div>
+                        <p class="eyebrow">Support your work</p>
+                        <h2>Smart hydraulics, PTO power, and 10-year warranty.</h2>
+                        <div class="spec-pills">
+                            <span class="pill">675 kg lift</span>
+                            <span class="pill">2 hydraulic pumps</span>
+                            <span class="pill">540 / 1000 PTO</span>
+                            <span class="pill">10-year warranty</span>
+                        </div>
+                        <div class="hero-actions">
+                            <a class="btn btn-primary" href="#detail">View Details</a>
+                            <a class="btn btn-light" href="#contact">Request Info</a>
+                        </div>
+                    </div>
+                </article>
+            </div>
+        </section>
+
+        <section class="section">
+            <div class="container">
+                <div class="section-head reveal">
+                    <div>
+                        <p class="eyebrow">Why choose us</p>
+                        <h2>Three reasons customers trust Golden Lion.</h2>
+                    </div>
+                </div>
+                <div class="value-row values-three">
+                    <div class="value-card reveal"><i class="fa-solid fa-tractor"></i><h3>Quality Inventory</h3><p>Curated tractor options for farms, landowners, and contractors.</p></div>
+                    <div class="value-card reveal"><i class="fa-solid fa-headset"></i><h3>Trusted Support</h3><p>Helpful guidance before, during, and after purchase.</p></div>
+                    <div class="value-card reveal"><i class="fa-solid fa-truck-fast"></i><h3>Delivery Assistance</h3><p>Delivery coordination and setup support for new equipment.</p></div>
+                </div>
+            </div>
+        </section>
+
+        <section class="section" id="about">
+            <div class="container about-grid">
+                <div class="image-panel reveal">
+                    <img class="parallax-img" src="assets/captain-2532-snowblower-wide.png" alt="Captain 2532 tractor blowing snow across a driveway">
+                </div>
+                <div class="text-stack reveal">
+                    <p class="eyebrow">About us</p>
+                    <h2>Built around one compact tractor that fits real properties.</h2>
+                    <p class="lead">Golden Lion Tractors focuses on practical compact equipment, clear guidance, and dependable after-sale support for landowners, contractors, and farm properties.</p>
+                    <div class="value-row values-two">
+                        <div class="value-card"><i class="fa-solid fa-shield-halved"></i><h3>Quality first</h3><p>Inventory selected for dependable work.</p></div>
+                        <div class="value-card"><i class="fa-solid fa-handshake"></i><h3>Transparent advice</h3><p>Clear guidance without pressure.</p></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="section" id="catalog">
+            <div class="container">
+                <div class="section-head reveal">
+                    <div>
+                        <p class="eyebrow">Product catalog</p>
+                        <h2>Browse tractors by type, power, and condition.</h2>
+                    </div>
+                    <p class="lead">A clean catalog focused on imagery and essential specs.</p>
+                </div>
+
+                <div class="filters reveal" aria-label="Product catalog filters">
+                    <div class="field">
+                        <label for="type-filter">Type</label>
+                        <select id="type-filter">
+                            <option value="all">All types</option>
+                            <option value="Compact">Compact</option>
+                            <option value="Utility">Utility</option>
+                            <option value="Row Crop">Row Crop</option>
+                            <option value="Heavy Duty">Heavy Duty</option>
+                        </select>
+                    </div>
+                    <div class="field">
+                        <label for="hp-filter">Horsepower</label>
+                        <select id="hp-filter">
+                            <option value="all">All horsepower</option>
+                            <option value="0-60">Under 60 HP</option>
+                            <option value="61-120">61-120 HP</option>
+                            <option value="121-999">121+ HP</option>
+                        </select>
+                    </div>
+                    <div class="field">
+                        <label for="condition-filter">New / Used</label>
+                        <select id="condition-filter">
+                            <option value="all">All</option>
+                            <option value="New">New</option>
+                            <option value="Used">Used</option>
+                        </select>
+                    </div>
+                    <button class="btn btn-dark" type="button" id="reset-filters">Reset Filters</button>
+                </div>
+
+                <div class="catalog-grid single-product" id="catalog-grid"></div>
+            </div>
+        </section>
+
+        <section class="detail-section section" id="detail">
+            <div class="container">
+                <div class="section-head reveal">
+                    <div>
+                        <p class="eyebrow">Product detail</p>
+                        <h2 id="detail-title">2026 Captain 2532 Tractor</h2>
+                    </div>
+                    <p class="lead">A focused product detail experience with gallery, specs, and a clear request path.</p>
+                </div>
+                <div class="detail-grid">
+                    <div class="gallery reveal">
+                        <div class="gallery-main"><img id="detail-main-image" src="assets/captain-2532-field.jpeg" alt="2026 Captain 2532 tractor with loader in a farm field"></div>
+                        <div class="gallery-side">
+                            <div><img src="assets/captain-2532-black.jpeg" alt="Captain 2532 black tractor side profile"></div>
+                            <div><img src="assets/captain-2532-snowblower-close.png" alt="Captain 2532 tractor clearing snow with snowblower attachment"></div>
+                            <div><img src="assets/captain-2532-snowblower-wide.png" alt="Captain 2532 tractor blowing snow across a driveway"></div>
+                        </div>
+                    </div>
+                    <aside class="detail-panel reveal">
+                        <span class="pill-gold pill" id="detail-condition">New</span>
+                        <h3 id="detail-model">2026 Captain 2532 Tractor</h3>
+                        <p id="detail-desc">A compact 25 HP tractor with Mitsubishi diesel power, 4WD, hydrostatic 3-range transmission, power steering, and smart hydraulic capability.</p>
+                        <table class="spec-table">
+                            <tr><th>Horsepower</th><td id="detail-hp">25 HP</td></tr>
+                            <tr><th>Engine Type</th><td>Mitsubishi Stage IV diesel, 3-cylinder</td></tr>
+                            <tr><th>Transmission</th><td>Hydrostatic 3 Range</td></tr>
+                            <tr><th>Hours</th><td>New inventory</td></tr>
+                            <tr><th>Drive Type</th><td>4WD</td></tr>
+                            <tr><th>Year</th><td id="detail-year">2026</td></tr>
+                            <tr><th>Condition</th><td id="detail-condition-table">New</td></tr>
+                            <tr><th>Lift Capacity</th><td>675 kg / 1,488 lb at lower link point</td></tr>
+                            <tr><th>PTO</th><td>Rear 540 RPM / Mid 2000 RPM</td></tr>
+                            <tr><th>Attachments</th><td>Auxiliary hydraulics, loader-ready configurations, PTO implements</td></tr>
+                        </table>
+                        <a class="btn btn-primary" href="#contact">Request Info</a>
+                    </aside>
+                </div>
+            </div>
+        </section>
+
+        <section class="section" id="services">
+            <div class="container">
+                <div class="section-head reveal">
+                    <div>
+                        <p class="eyebrow">Services</p>
+                        <h2>Support that keeps equipment working.</h2>
+                    </div>
+                    <p class="lead">Clean, focused support for maintenance, parts, inspections, delivery, and financing assistance.</p>
+                </div>
+                <div class="services-layout">
+                    <div class="services-visual reveal">
+                        <img class="parallax-img" src="https://images.unsplash.com/photo-1530267981375-f0de937f5f13?auto=format&fit=crop&w=1500&q=82" alt="Agricultural machinery and tractor service environment">
+                    </div>
+                    <div class="services-grid">
+                        <div class="service-card reveal"><i class="fa-solid fa-oil-can"></i><h3>Tractor Maintenance</h3><p>Seasonal service and preventive care.</p></div>
+                        <div class="service-card reveal"><i class="fa-solid fa-boxes-stacked"></i><h3>Parts Support</h3><p>Filters, fittings, blades, belts, and essentials.</p></div>
+                        <div class="service-card reveal"><i class="fa-solid fa-clipboard-check"></i><h3>Equipment Inspections</h3><p>Equipment checks and trade-in reviews.</p></div>
+                        <div class="service-card reveal"><i class="fa-solid fa-truck-ramp-box"></i><h3>Delivery Assistance</h3><p>Coordination, setup, and handoff support.</p></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="cta">
+            <div class="container cta-inner reveal">
+                <h2>Ready to choose equipment with confidence?</h2>
+                <div class="hero-actions" style="margin-top:0;">
+                    <a class="btn btn-primary" href="#catalog">Browse Catalog</a>
+                    <a class="btn btn-light" href="#contact">Contact Us</a>
+                </div>
+            </div>
+        </section>
+
+        <section class="section" id="contact">
+            <div class="container contact-grid">
+                <aside class="contact-card reveal">
+                    <p class="eyebrow">Contact us</p>
+                    <h2>Reach out to Golden Lion Tractors.</h2>
+                    <div class="contact-list">
+                        <div class="contact-item"><i class="fa-solid fa-phone"></i><div><strong>Phone</strong><br>(416) 555-0123</div></div>
+                        <div class="contact-item"><i class="fa-solid fa-envelope"></i><div><strong>Email</strong><br>sales@goldenliontractors.com</div></div>
+                        <div class="contact-item"><i class="fa-solid fa-location-dot"></i><div><strong>Location</strong><br>Ontario, Canada</div></div>
+                        <div class="contact-item"><i class="fa-solid fa-clock"></i><div><strong>Hours</strong><br>Mon-Fri 8:00 AM-6:00 PM<br>Sat 9:00 AM-3:00 PM</div></div>
+                    </div>
+                    <div class="map-placeholder">
+                        <div>
+                            <i class="fa-solid fa-map-location-dot" style="font-size:2rem;color:var(--gold-light);margin-bottom:10px;"></i>
+                            <strong>Google Maps Placeholder</strong>
+                            <p>Replace with the dealership map embed.</p>
+                        </div>
+                    </div>
+                </aside>
+                <form class="form-card reveal" id="contact-form">
+                    <p class="eyebrow">Speak with our team</p>
+                    <div class="form-grid">
+                        <div class="field"><label for="name">Name</label><input id="name" type="text" required></div>
+                        <div class="field"><label for="email">Email</label><input id="email" type="email" required></div>
+                        <div class="field"><label for="phone">Phone</label><input id="phone" type="tel"></div>
+                        <div class="field"><label for="interest">Tractor Interest</label><input id="interest" type="text" placeholder="Model, service, parts, or quote"></div>
+                        <div class="field full"><label for="message">Message</label><textarea id="message" placeholder="Tell us what kind of equipment or support you need."></textarea></div>
+                        <button class="btn btn-primary full" type="submit">Send Request</button>
+                    </div>
+                    <p id="form-status" style="display:none;color:#286347;font-weight:900;margin-top:16px;">Thanks. This form is ready to connect to a backend.</p>
+                </form>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <div class="footer-grid">
+                <div>
+                    <img class="footer-logo" src="assets/golden-lion-logo.png" alt="Golden Lion Tractors logo">
+                    <h3>Golden Lion Tractors</h3>
+                    <p>Premium tractors, trusted service, and practical support for serious equipment buyers.</p>
+                </div>
+                <div>
+                    <h3>Navigation</h3>
+                    <ul>
+                        <li><a href="#home">Home</a></li>
+                        <li><a href="#about">About</a></li>
+                        <li><a href="#catalog">Product Catalog</a></li>
+                        <li><a href="#services">Services</a></li>
+                        <li><a href="#contact">Contact Us</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h3>Contact</h3>
+                    <ul>
+                        <li>(416) 555-0123</li>
+                        <li>sales@goldenliontractors.com</li>
+                        <li>Ontario, Canada</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="copyright">&copy; 2026 Golden Lion Tractors. All rights reserved.</div>
+        </div>
+    </footer>
+
+    <script>
+        const inventory = [
+            {
+                model: "2026 Captain 2532 Tractor",
+                type: "Compact",
+                hp: 25,
+                year: 2026,
+                condition: "New",
+                price: "Starting at $25,999",
+                image: "assets/captain-2532-field.jpeg",
+                description: "A compact tractor with Mitsubishi 3-cylinder diesel power, 4WD, hydrostatic 3-range transmission, power steering, two hydraulic pumps, and 675 kg rear lift capacity."
+            }
+        ];
+
+        const catalogGrid = document.getElementById("catalog-grid");
+
+        function card(item) {
+            return `
+                <article class="catalog-card reveal">
+                    <div class="catalog-image">
+                        <img class="parallax-img" src="${item.image}" alt="${item.model}">
+                    </div>
+                    <div class="catalog-body">
+                        <h3>${item.model}</h3>
+                        <div class="catalog-meta">
+                            <div><span>HP</span><strong>${item.hp}</strong></div>
+                            <div><span>Year</span><strong>${item.year}</strong></div>
+                            <div><span>State</span><strong>${item.condition}</strong></div>
+                        </div>
+                        <div class="price-row">
+                            <strong>${item.price}</strong>
+                            <span class="pill-gold pill">${item.type}</span>
+                        </div>
+                        <button class="btn btn-dark view-detail" type="button" data-model="${item.model}">View Details</button>
+                    </div>
+                </article>
+            `;
+        }
+
+        function filteredItems() {
+            const type = document.getElementById("type-filter").value;
+            const hp = document.getElementById("hp-filter").value;
+            const condition = document.getElementById("condition-filter").value;
+            return inventory.filter((item) => {
+                if (type !== "all" && item.type !== type) return false;
+                if (condition !== "all" && item.condition !== condition) return false;
+                if (hp !== "all") {
+                    const [min, max] = hp.split("-").map(Number);
+                    if (item.hp < min || item.hp > max) return false;
+                }
+                return true;
+            });
+        }
+
+        function renderCatalog() {
+            catalogGrid.innerHTML = filteredItems().map(card).join("");
+            bindDetailButtons();
+            observeReveals();
+        }
+
+        function updateDetail(item) {
+            document.getElementById("detail-title").textContent = item.model;
+            document.getElementById("detail-model").textContent = item.model;
+            document.getElementById("detail-desc").textContent = item.description;
+            document.getElementById("detail-hp").textContent = `${item.hp} HP`;
+            document.getElementById("detail-year").textContent = item.year;
+            document.getElementById("detail-condition").textContent = item.condition;
+            document.getElementById("detail-condition-table").textContent = item.condition;
+            const image = document.getElementById("detail-main-image");
+            image.src = item.image;
+            image.alt = `${item.model} main product image`;
+            document.getElementById("detail").scrollIntoView({ behavior: "smooth" });
+        }
+
+        function bindDetailButtons() {
+            document.querySelectorAll(".view-detail").forEach((button) => {
+                button.addEventListener("click", () => {
+                    const item = inventory.find((entry) => entry.model === button.dataset.model);
+                    if (item) updateDetail(item);
+                });
+            });
+        }
+
+        document.getElementById("type-filter").addEventListener("change", renderCatalog);
+        document.getElementById("hp-filter").addEventListener("change", renderCatalog);
+        document.getElementById("condition-filter").addEventListener("change", renderCatalog);
+        document.getElementById("reset-filters").addEventListener("click", () => {
+            document.getElementById("type-filter").value = "all";
+            document.getElementById("hp-filter").value = "all";
+            document.getElementById("condition-filter").value = "all";
+            renderCatalog();
+        });
+
+        document.getElementById("contact-form").addEventListener("submit", (event) => {
+            event.preventDefault();
+            document.getElementById("form-status").style.display = "block";
+            event.target.reset();
+        });
+
+        function updateHeaderState() {
+            document.body.classList.toggle("is-scrolled", window.scrollY > 40);
+        }
+
+        window.addEventListener("scroll", updateHeaderState, { passive: true });
+        updateHeaderState();
+
+        const menuToggle = document.getElementById("menu-toggle");
+        const mobileMenu = document.getElementById("mobile-menu");
+        menuToggle.addEventListener("click", () => mobileMenu.classList.toggle("is-open"));
+        mobileMenu.querySelectorAll("a").forEach((link) => {
+            link.addEventListener("click", () => mobileMenu.classList.remove("is-open"));
+        });
+
+        let observer;
+        function observeReveals() {
+            if (observer) observer.disconnect();
+            observer = new IntersectionObserver((entries) => {
+                entries.forEach((entry) => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add("is-visible");
+                    }
+                });
+            }, { threshold: 0.14 });
+            document.querySelectorAll(".reveal").forEach((element) => observer.observe(element));
+        }
+
+        renderCatalog();
+        observeReveals();
+    </script>
+</body>
+</html>
