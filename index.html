@@ -486,7 +486,6 @@
 
         .value-card,
         .service-card,
-        .catalog-card,
         .detail-panel,
         .contact-card,
         .form-card {
@@ -515,7 +514,6 @@
 
         .value-card p,
         .service-card p,
-        .catalog-card p,
         .detail-panel p {
             color: var(--muted);
         }
@@ -571,18 +569,6 @@
             color: var(--black);
         }
 
-        .filters {
-            display: grid;
-            grid-template-columns: repeat(4, 1fr);
-            gap: 14px;
-            margin-bottom: 24px;
-            background: var(--white);
-            border: 1px solid var(--line);
-            border-radius: var(--radius);
-            padding: 16px;
-            box-shadow: var(--shadow);
-        }
-
         .field {
             display: grid;
             gap: 7px;
@@ -613,74 +599,11 @@
             resize: vertical;
         }
 
-        .catalog-grid,
         .services-grid,
         .related-grid {
             display: grid;
             grid-template-columns: repeat(3, 1fr);
             gap: 18px;
-        }
-
-        .catalog-grid.single-product {
-            grid-template-columns: minmax(0, 760px);
-        }
-
-        .catalog-card {
-            overflow: hidden;
-            transition: transform 0.2s ease, box-shadow 0.2s ease;
-        }
-
-        .catalog-card:hover {
-            transform: translateY(-6px);
-            box-shadow: 0 24px 60px rgba(15, 17, 18, 0.16);
-        }
-
-        .catalog-image {
-            height: 360px;
-            background: #d8d1c5;
-        }
-
-        .catalog-body {
-            padding: 22px;
-        }
-
-        .catalog-body h3 {
-            font-size: 1.22rem;
-            line-height: 1.2;
-            margin-bottom: 12px;
-        }
-
-        .catalog-meta {
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            border-top: 1px solid var(--line);
-            border-bottom: 1px solid var(--line);
-            margin: 14px 0;
-        }
-
-        .catalog-meta div {
-            padding: 10px 8px;
-            border-right: 1px solid var(--line);
-        }
-
-        .catalog-meta div:last-child {
-            border-right: 0;
-        }
-
-        .catalog-meta span {
-            display: block;
-            color: var(--muted);
-            font-size: 0.72rem;
-            font-weight: 950;
-            text-transform: uppercase;
-        }
-
-        .price-row {
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-            gap: 12px;
-            margin: 16px 0;
         }
 
         .detail-section {
@@ -837,8 +760,7 @@
         }
 
         .image-panel:hover .parallax-img,
-        .featured-image:hover .parallax-img,
-        .catalog-image:hover .parallax-img {
+        .featured-image:hover .parallax-img {
             transform: scale(1.04);
         }
 
@@ -931,14 +853,9 @@
             .value-row,
             .value-row.values-two,
             .value-row.values-three,
-            .catalog-grid,
             .services-grid,
             .related-grid,
             .footer-grid {
-                grid-template-columns: repeat(2, 1fr);
-            }
-
-            .filters {
                 grid-template-columns: repeat(2, 1fr);
             }
 
@@ -988,10 +905,8 @@
             .value-row,
             .value-row.values-two,
             .value-row.values-three,
-            .catalog-grid,
             .services-grid,
             .related-grid,
-            .filters,
             .footer-grid,
             .form-grid {
                 grid-template-columns: 1fr;
@@ -1031,8 +946,6 @@
             </a>
             <nav class="nav-links" aria-label="Main navigation">
                 <a href="#home">Home</a>
-                <a href="#about">About</a>
-                <a href="#catalog">Product Catalog</a>
                 <a href="#services">Services</a>
                 <a href="#contact">Contact Us</a>
             </nav>
@@ -1043,8 +956,6 @@
         </div>
         <div class="container mobile-menu" id="mobile-menu">
             <a href="#home">Home</a>
-            <a href="#about">About</a>
-            <a href="#catalog">Product Catalog</a>
             <a href="#services">Services</a>
             <a href="#contact">Contact Us</a>
         </div>
@@ -1060,7 +971,7 @@
                 <h1>Your Property.<br> Our Expertise.</h1>
                 <p>Premium equipment, trusted support, and machinery built for real work.</p>
                 <div class="hero-actions">
-                    <a class="btn btn-primary" href="#catalog">View Product Catalog</a>
+                    <a class="btn btn-primary" href="#detail">View Details</a>
                     <a class="btn btn-light" href="#contact">Contact Us</a>
                 </div>
             </div>
@@ -1146,7 +1057,7 @@
                             <span class="pill">21 km/h max speed</span>
                         </div>
                         <div class="hero-actions">
-                            <a class="btn btn-primary" href="#catalog">View Catalog</a>
+                            <a class="btn btn-primary" href="#detail">View Details</a>
                             <a class="btn btn-light" href="#contact">Request Info</a>
                         </div>
                     </div>
@@ -1189,68 +1100,6 @@
             </div>
         </section>
 
-        <section class="section" id="about">
-            <div class="container about-grid">
-                <div class="image-panel reveal">
-                    <img class="parallax-img" src="assets/captain-2532-snowblower-wide.png" alt="Captain 2532 tractor blowing snow across a driveway">
-                </div>
-                <div class="text-stack reveal">
-                    <p class="eyebrow">About us</p>
-                    <h2>Built around equipment that fits real properties.</h2>
-                    <p class="lead">Golden Lion Tractors Ltd focuses on practical compact equipment, clear guidance, and dependable after-sale support for landowners, contractors, and farm properties.</p>
-                    <div class="value-row values-two">
-                        <div class="value-card"><i class="fa-solid fa-shield-halved"></i><h3>Quality first</h3><p>Inventory selected for dependable work.</p></div>
-                        <div class="value-card"><i class="fa-solid fa-handshake"></i><h3>Transparent advice</h3><p>Clear guidance without pressure.</p></div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <section class="section" id="catalog">
-            <div class="container">
-                <div class="section-head reveal">
-                    <div>
-                        <p class="eyebrow">Product catalog</p>
-                        <h2>Browse tractors by type, power, and condition.</h2>
-                    </div>
-                    <p class="lead">A clean catalog focused on imagery and essential specs.</p>
-                </div>
-
-                <div class="filters reveal" aria-label="Product catalog filters">
-                    <div class="field">
-                        <label for="type-filter">Type</label>
-                        <select id="type-filter">
-                            <option value="all">All types</option>
-                            <option value="Compact">Compact</option>
-                            <option value="Utility">Utility</option>
-                            <option value="Row Crop">Row Crop</option>
-                            <option value="Heavy Duty">Heavy Duty</option>
-                        </select>
-                    </div>
-                    <div class="field">
-                        <label for="hp-filter">Horsepower</label>
-                        <select id="hp-filter">
-                            <option value="all">All</option>
-                            <option value="20-25">20-25 HP</option>
-                            <option value="35-60">35-60 HP</option>
-                            <option value="60-999">60+ HP</option>
-                        </select>
-                    </div>
-                    <div class="field">
-                        <label for="condition-filter">New / Used</label>
-                        <select id="condition-filter">
-                            <option value="all">All</option>
-                            <option value="New">New</option>
-                            <option value="Used">Used</option>
-                        </select>
-                    </div>
-                    <button class="btn btn-dark" type="button" id="reset-filters">Reset Filters</button>
-                </div>
-
-                <div class="catalog-grid single-product" id="catalog-grid"></div>
-            </div>
-        </section>
-
         <section class="detail-section section" id="detail">
             <div class="container">
                 <div class="section-head reveal">
@@ -1282,7 +1131,7 @@
                             <tr><th>Year</th><td id="detail-year">2026</td></tr>
                             <tr><th>Condition</th><td id="detail-condition-table">New</td></tr>
                             <tr><th>Lift Capacity</th><td>675 kg / 1,488 lb at lower link point</td></tr>
-                            <tr><th>PTO</th><td>Rear 540 RPM / Mid 2000 RPM</td></tr>
+                            <tr><th>PTO</th><td>540/2000 PTO</td></tr>
                             <tr><th>Attachments</th><td>Auxiliary hydraulics, loader-ready configurations, PTO implements</td></tr>
                         </table>
                         <a class="btn btn-primary" href="#contact">Request Info</a>
@@ -1300,16 +1149,11 @@
                     </div>
                     <p class="lead">Clean, focused support for maintenance, parts, inspections, delivery, and financing assistance.</p>
                 </div>
-                <div class="services-layout">
-                    <div class="services-visual reveal">
-                        <img class="parallax-img" src="https://images.unsplash.com/photo-1530267981375-f0de937f5f13?auto=format&fit=crop&w=1500&q=82" alt="Agricultural machinery and tractor service environment">
-                    </div>
-                    <div class="services-grid">
-                        <div class="service-card reveal"><i class="fa-solid fa-oil-can"></i><h3>Tractor Maintenance</h3><p>Seasonal service and preventive care.</p></div>
-                        <div class="service-card reveal"><i class="fa-solid fa-boxes-stacked"></i><h3>Parts Support</h3><p>Filters, fittings, blades, belts, and essentials.</p></div>
-                        <div class="service-card reveal"><i class="fa-solid fa-clipboard-check"></i><h3>Equipment Inspections</h3><p>Equipment checks and trade-in reviews.</p></div>
-                        <div class="service-card reveal"><i class="fa-solid fa-truck-ramp-box"></i><h3>Delivery Assistance</h3><p>Coordination, setup, and handoff support.</p></div>
-                    </div>
+                <div class="services-grid">
+                    <div class="service-card reveal"><i class="fa-solid fa-oil-can"></i><h3>Tractor Maintenance</h3><p>Seasonal service and preventive care.</p></div>
+                    <div class="service-card reveal"><i class="fa-solid fa-boxes-stacked"></i><h3>Parts Support</h3><p>Filters, fittings, blades, belts, and essentials.</p></div>
+                    <div class="service-card reveal"><i class="fa-solid fa-clipboard-check"></i><h3>Equipment Inspections</h3><p>Equipment checks and trade-in reviews.</p></div>
+                    <div class="service-card reveal"><i class="fa-solid fa-truck-ramp-box"></i><h3>Delivery Assistance</h3><p>Coordination, setup, and handoff support.</p></div>
                 </div>
             </div>
         </section>
@@ -1318,7 +1162,7 @@
             <div class="container cta-inner reveal">
                 <h2>Ready to choose equipment with confidence?</h2>
                 <div class="hero-actions" style="margin-top:0;">
-                    <a class="btn btn-primary" href="#catalog">Browse Catalog</a>
+                    <a class="btn btn-primary" href="#detail">View Details</a>
                     <a class="btn btn-light" href="#contact">Contact Us</a>
                 </div>
             </div>
@@ -1330,10 +1174,11 @@
                     <p class="eyebrow">Contact us</p>
                     <h2>Reach out to Golden Lion Tractors Ltd.</h2>
                     <div class="contact-list">
-                        <div class="contact-item"><i class="fa-solid fa-phone"></i><div><strong>Phone</strong><br>(416) 555-0123</div></div>
+                        <div class="contact-item"><i class="fa-solid fa-phone"></i><div><strong>Dharmpreet Grewal</strong><br>647-519-0200</div></div>
+                        <div class="contact-item"><i class="fa-solid fa-phone"></i><div><strong>Tejinder Singh</strong><br>647-622-1754</div></div>
                         <div class="contact-item"><i class="fa-solid fa-envelope"></i><div><strong>Email</strong><br>sales@goldenliontractors.com</div></div>
-                        <div class="contact-item"><i class="fa-solid fa-location-dot"></i><div><strong>Location</strong><br>Ontario, Canada</div></div>
-                        <div class="contact-item"><i class="fa-solid fa-clock"></i><div><strong>Hours</strong><br>Mon-Fri 8:00 AM-6:00 PM<br>Sat 9:00 AM-3:00 PM</div></div>
+                        <div class="contact-item"><i class="fa-solid fa-location-dot"></i><div><strong>Address</strong><br>18218 Hurontario Street<br>Caledon, ON</div></div>
+                        <div class="contact-item"><i class="fa-solid fa-clock"></i><div><strong>Hours</strong><br>Monday to Sunday &mdash; 10 AM to 6 PM</div></div>
                     </div>
                     <div class="map-placeholder">
                         <div>
@@ -1371,8 +1216,6 @@
                     <h3>Navigation</h3>
                     <ul>
                         <li><a href="#home">Home</a></li>
-                        <li><a href="#about">About</a></li>
-                        <li><a href="#catalog">Product Catalog</a></li>
                         <li><a href="#services">Services</a></li>
                         <li><a href="#contact">Contact Us</a></li>
                     </ul>
@@ -1380,9 +1223,10 @@
                 <div>
                     <h3>Contact</h3>
                     <ul>
-                        <li>(416) 555-0123</li>
+                        <li>Dharmpreet Grewal: 647-519-0200</li>
+                        <li>Tejinder Singh: 647-622-1754</li>
                         <li>sales@goldenliontractors.com</li>
-                        <li>Ontario, Canada</li>
+                        <li>18218 Hurontario Street, Caledon, ON</li>
                     </ul>
                 </div>
             </div>
@@ -1404,52 +1248,6 @@
             }
         ];
 
-        const catalogGrid = document.getElementById("catalog-grid");
-
-        function card(item) {
-            return `
-                <article class="catalog-card reveal">
-                    <div class="catalog-image">
-                        <img class="parallax-img" src="${item.image}" alt="${item.model}">
-                    </div>
-                    <div class="catalog-body">
-                        <h3>${item.model}</h3>
-                        <div class="catalog-meta">
-                            <div><span>HP</span><strong>${item.hp}</strong></div>
-                            <div><span>Year</span><strong>${item.year}</strong></div>
-                            <div><span>State</span><strong>${item.condition}</strong></div>
-                        </div>
-                        <div class="price-row">
-                            <strong>${item.price}</strong>
-                            <span class="pill-gold pill">${item.type}</span>
-                        </div>
-                        <button class="btn btn-dark view-detail" type="button" data-model="${item.model}">View Details</button>
-                    </div>
-                </article>
-            `;
-        }
-
-        function filteredItems() {
-            const type = document.getElementById("type-filter").value;
-            const hp = document.getElementById("hp-filter").value;
-            const condition = document.getElementById("condition-filter").value;
-            return inventory.filter((item) => {
-                if (type !== "all" && item.type !== type) return false;
-                if (condition !== "all" && item.condition !== condition) return false;
-                if (hp !== "all") {
-                    const [min, max] = hp.split("-").map(Number);
-                    if (item.hp < min || item.hp > max) return false;
-                }
-                return true;
-            });
-        }
-
-        function renderCatalog() {
-            catalogGrid.innerHTML = filteredItems().map(card).join("");
-            bindDetailButtons();
-            observeReveals();
-        }
-
         function updateDetail(item) {
             document.getElementById("detail-title").textContent = item.model;
             document.getElementById("detail-model").textContent = item.model;
@@ -1463,25 +1261,6 @@
             image.alt = `${item.model} main product image`;
             document.getElementById("detail").scrollIntoView({ behavior: "smooth" });
         }
-
-        function bindDetailButtons() {
-            document.querySelectorAll(".view-detail").forEach((button) => {
-                button.addEventListener("click", () => {
-                    const item = inventory.find((entry) => entry.model === button.dataset.model);
-                    if (item) updateDetail(item);
-                });
-            });
-        }
-
-        document.getElementById("type-filter").addEventListener("change", renderCatalog);
-        document.getElementById("hp-filter").addEventListener("change", renderCatalog);
-        document.getElementById("condition-filter").addEventListener("change", renderCatalog);
-        document.getElementById("reset-filters").addEventListener("click", () => {
-            document.getElementById("type-filter").value = "all";
-            document.getElementById("hp-filter").value = "all";
-            document.getElementById("condition-filter").value = "all";
-            renderCatalog();
-        });
 
         document.getElementById("contact-form").addEventListener("submit", (event) => {
             event.preventDefault();
@@ -1516,7 +1295,6 @@
             document.querySelectorAll(".reveal").forEach((element) => observer.observe(element));
         }
 
-        renderCatalog();
         observeReveals();
     </script>
 </body>
