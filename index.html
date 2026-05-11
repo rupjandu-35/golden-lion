@@ -368,12 +368,12 @@
 
         .cinematic-scroll-layout {
             display: grid;
-            grid-template-columns: minmax(320px, min(34vw, 560px)) minmax(0, 1fr);
-            gap: clamp(24px, 4vw, 72px);
+            grid-template-columns: minmax(560px, 46vw) minmax(0, 1fr);
+            gap: clamp(28px, 4vw, 78px);
             min-height: 300vh;
             position: relative;
             align-items: start;
-            padding-left: clamp(44px, 8vw, 148px);
+            padding-left: clamp(28px, 4vw, 88px);
         }
 
         .sticky-video-panel {
@@ -394,12 +394,29 @@
             mask-composite: intersect;
         }
 
-        .sticky-video-panel video {
+        .video-triptych {
+            display: grid;
+            grid-template-columns: minmax(0, 0.72fr) minmax(220px, 1fr) minmax(0, 0.72fr);
             width: 100%;
             height: 100%;
-            object-fit: contain;
+            gap: 0;
+        }
+
+        .video-triptych video {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
             object-position: center;
-            filter: brightness(0.74) contrast(1.12) saturate(0.96);
+        }
+
+        .video-triptych .video-side {
+            filter: brightness(0.42) contrast(1.16) saturate(0.82) blur(1px);
+            transform: scale(1.04);
+            opacity: 0.72;
+        }
+
+        .video-triptych .video-main {
+            filter: brightness(0.82) contrast(1.1) saturate(0.98);
         }
 
         .sticky-video-panel::after {
@@ -408,8 +425,8 @@
             inset: 0;
             pointer-events: none;
             background:
-                linear-gradient(to right, rgba(0, 0, 0, 0.04) 0%, rgba(0, 0, 0, 0) 24%, rgba(0, 0, 0, 0.08) 82%, rgba(0, 0, 0, 0.28) 100%),
-                linear-gradient(to bottom, rgba(15, 17, 18, 0.16) 0%, rgba(15, 17, 18, 0) 10%, rgba(15, 17, 18, 0) 90%, rgba(15, 17, 18, 0.2) 100%);
+                linear-gradient(to right, rgba(0, 0, 0, 0.12) 0%, rgba(0, 0, 0, 0) 22%, rgba(0, 0, 0, 0.18) 72%, rgba(0, 0, 0, 0.92) 100%),
+                linear-gradient(to bottom, rgba(15, 17, 18, 0.18) 0%, rgba(15, 17, 18, 0) 12%, rgba(15, 17, 18, 0) 82%, rgba(15, 17, 18, 0.52) 100%);
         }
 
         .scrolling-content {
@@ -891,6 +908,7 @@
 
             .cinematic-scroll-layout {
                 min-height: auto;
+                padding-left: 0;
             }
 
             .sticky-video-panel {
@@ -1051,9 +1069,17 @@
         <section class="cinematic-scroll-section" id="intro">
             <div class="cinematic-scroll-layout">
                 <div class="sticky-video-panel" aria-hidden="true">
-                    <video preload="auto" playsinline muted autoplay loop>
-                        <source src="assets/who-we-serve-bg.mp4?v=commercial-3" type="video/mp4">
-                    </video>
+                    <div class="video-triptych">
+                        <video class="video-side" preload="auto" playsinline muted autoplay loop>
+                            <source src="assets/who-we-serve-bg.mp4?v=commercial-3" type="video/mp4">
+                        </video>
+                        <video class="video-main" preload="auto" playsinline muted autoplay loop>
+                            <source src="assets/who-we-serve-bg.mp4?v=commercial-3" type="video/mp4">
+                        </video>
+                        <video class="video-side" preload="auto" playsinline muted autoplay loop>
+                            <source src="assets/who-we-serve-bg.mp4?v=commercial-3" type="video/mp4">
+                        </video>
+                    </div>
                 </div>
                 <div class="scrolling-content">
                     <article class="cinematic-card reveal">
