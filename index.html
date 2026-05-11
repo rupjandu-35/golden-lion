@@ -368,7 +368,7 @@
 
         .cinematic-scroll-layout {
             display: grid;
-            grid-template-columns: minmax(320px, 45vw) minmax(420px, 1fr);
+            grid-template-columns: minmax(300px, min(32vw, 520px)) minmax(0, 1fr);
             gap: 0;
             min-height: 300vh;
             position: relative;
@@ -399,7 +399,7 @@
             inset: 0;
             pointer-events: none;
             background:
-                linear-gradient(to right, rgba(0, 0, 0, 0.1) 0%, rgba(0, 0, 0, 0.45) 55%, rgba(0, 0, 0, 0.95) 100%),
+                linear-gradient(to right, rgba(0, 0, 0, 0.08) 0%, rgba(0, 0, 0, 0.32) 58%, rgba(0, 0, 0, 0.96) 100%),
                 linear-gradient(to bottom, rgba(15, 17, 18, 0.72) 0%, rgba(15, 17, 18, 0) 20%, rgba(15, 17, 18, 0) 72%, rgba(15, 17, 18, 0.76) 100%);
         }
 
@@ -409,9 +409,7 @@
             gap: 36vh;
             min-height: 300vh;
             padding: 30vh min(7vw, 96px) 34vh;
-            background:
-                linear-gradient(90deg, rgba(15, 17, 18, 0.94), var(--black) 24%),
-                var(--black);
+            background: var(--black);
         }
 
         .cinematic-card {
