@@ -37,8 +37,10 @@
         body {
             background: var(--paper);
             color: var(--ink);
-            font-family: -apple-system, BlinkMacSystemFont, "SF Pro Display", "SF Pro Text", "Helvetica Neue", Helvetica, Arial, sans-serif;
+            font-family: -apple-system, BlinkMacSystemFont, "SF Pro Text", "Helvetica Neue", Helvetica, Arial, sans-serif;
             line-height: 1.55;
+            -webkit-font-smoothing: antialiased;
+            text-rendering: optimizeLegibility;
         }
 
         img {
@@ -78,40 +80,40 @@
             position: sticky;
             top: 0;
             z-index: 40;
-            background: rgba(15, 17, 18, 0.08);
-            border-bottom: 1px solid rgba(255, 255, 255, 0.08);
-            backdrop-filter: blur(18px);
+            background: rgba(251, 251, 253, 0.72);
+            border-bottom: 1px solid rgba(15, 17, 18, 0.08);
+            backdrop-filter: blur(24px) saturate(1.4);
             transition: background 0.25s ease, border-color 0.25s ease, box-shadow 0.25s ease;
         }
 
         body.is-scrolled .site-header {
-            background: rgba(255, 255, 255, 0.9);
+            background: rgba(251, 251, 253, 0.88);
             border-bottom-color: rgba(15, 17, 18, 0.08);
-            box-shadow: 0 12px 34px rgba(15, 17, 18, 0.08);
+            box-shadow: 0 8px 28px rgba(15, 17, 18, 0.06);
         }
 
         .nav {
-            min-height: 72px;
+            min-height: 70px;
             display: flex;
             align-items: center;
             justify-content: space-between;
-            gap: 24px;
+            gap: 22px;
         }
 
         .brand {
             display: flex;
             align-items: center;
-            gap: 14px;
-            min-width: 238px;
+            gap: 12px;
+            min-width: 220px;
         }
 
         .brand-logo {
-            width: 82px;
-            height: 56px;
+            width: 64px;
+            height: 50px;
             background: var(--white);
-            border: 1px solid var(--line);
-            border-radius: 14px;
-            box-shadow: 0 10px 26px rgba(15, 17, 18, 0.08);
+            border: 1px solid rgba(15, 17, 18, 0.08);
+            border-radius: 16px;
+            box-shadow: 0 8px 24px rgba(15, 17, 18, 0.08);
             overflow: hidden;
         }
 
@@ -122,9 +124,10 @@
 
         .brand-name {
             display: grid;
-            color: var(--white);
-            font-weight: 950;
-            line-height: 1.05;
+            color: var(--black);
+            font-weight: 800;
+            line-height: 1.02;
+            letter-spacing: 0;
             text-transform: uppercase;
         }
 
@@ -134,20 +137,21 @@
 
         .brand-name span:last-child {
             color: var(--gold);
-            font-size: 0.86rem;
+            font-size: 0.82rem;
+            letter-spacing: 0.02em;
         }
 
         .nav-links {
             display: flex;
             align-items: center;
-            gap: 24px;
-            color: rgba(255, 255, 255, 0.86);
-            font-size: 0.94rem;
-            font-weight: 850;
+            gap: 28px;
+            color: rgba(15, 17, 18, 0.72);
+            font-size: 0.9rem;
+            font-weight: 650;
         }
 
         body.is-scrolled .nav-links {
-            color: #3f464b;
+            color: rgba(15, 17, 18, 0.72);
         }
 
         .nav-links a {
@@ -263,6 +267,8 @@
         h1,
         h2,
         h3 {
+            font-family: -apple-system, BlinkMacSystemFont, "SF Pro Display", "SF Pro Text", "Helvetica Neue", Helvetica, Arial, sans-serif;
+            font-weight: 760;
             letter-spacing: 0;
         }
 
@@ -569,6 +575,104 @@
             color: var(--black);
         }
 
+        .specs-section {
+            background:
+                radial-gradient(circle at 8% 0%, rgba(201, 152, 35, 0.16), transparent 28%),
+                linear-gradient(180deg, #101214, #050607);
+            color: var(--white);
+        }
+
+        .specs-section .section-head {
+            align-items: start;
+        }
+
+        .specs-section .lead {
+            color: rgba(255, 255, 255, 0.68);
+        }
+
+        .spec-metrics {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 14px;
+            margin-bottom: 42px;
+        }
+
+        .spec-metric {
+            min-height: 150px;
+            border: 1px solid rgba(255, 255, 255, 0.12);
+            border-radius: 24px;
+            background: rgba(255, 255, 255, 0.055);
+            box-shadow: 0 24px 70px rgba(0, 0, 0, 0.28);
+            padding: 24px;
+            display: grid;
+            align-content: end;
+        }
+
+        .spec-metric span {
+            color: rgba(255, 255, 255, 0.54);
+            font-size: 0.78rem;
+            font-weight: 700;
+            margin-bottom: 8px;
+        }
+
+        .spec-metric strong {
+            font-size: clamp(1.45rem, 2.4vw, 2.5rem);
+            line-height: 1;
+        }
+
+        .comparison-card {
+            overflow: hidden;
+            border: 1px solid rgba(255, 255, 255, 0.14);
+            border-radius: 26px;
+            background: rgba(255, 255, 255, 0.055);
+            box-shadow: 0 30px 90px rgba(0, 0, 0, 0.3);
+        }
+
+        .comparison-table {
+            width: 100%;
+            border-collapse: collapse;
+            min-width: 900px;
+        }
+
+        .comparison-table th,
+        .comparison-table td {
+            padding: 18px 20px;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.11);
+            text-align: left;
+            vertical-align: middle;
+        }
+
+        .comparison-table th {
+            color: var(--white);
+            font-size: 0.9rem;
+            font-weight: 760;
+        }
+
+        .comparison-table td {
+            color: rgba(255, 255, 255, 0.72);
+        }
+
+        .comparison-table tbody tr:last-child td {
+            border-bottom: 0;
+        }
+
+        .comparison-table td:first-child,
+        .comparison-table th:first-child {
+            color: rgba(255, 255, 255, 0.92);
+            font-weight: 760;
+            width: 22%;
+        }
+
+        .comparison-table .highlight {
+            color: var(--white);
+            background: rgba(201, 152, 35, 0.1);
+            font-weight: 760;
+        }
+
+        .comparison-scroll {
+            overflow-x: auto;
+        }
+
         .field {
             display: grid;
             gap: 7px;
@@ -853,6 +957,7 @@
             .value-row,
             .value-row.values-two,
             .value-row.values-three,
+            .spec-metrics,
             .services-grid,
             .related-grid,
             .footer-grid {
@@ -905,6 +1010,7 @@
             .value-row,
             .value-row.values-two,
             .value-row.values-three,
+            .spec-metrics,
             .services-grid,
             .related-grid,
             .footer-grid,
@@ -946,6 +1052,7 @@
             </a>
             <nav class="nav-links" aria-label="Main navigation">
                 <a href="#home">Home</a>
+                <a href="#specs">Specs</a>
                 <a href="#services">Services</a>
                 <a href="#contact">Contact Us</a>
             </nav>
@@ -956,6 +1063,7 @@
         </div>
         <div class="container mobile-menu" id="mobile-menu">
             <a href="#home">Home</a>
+            <a href="#specs">Specs</a>
             <a href="#services">Services</a>
             <a href="#contact">Contact Us</a>
         </div>
@@ -971,7 +1079,7 @@
                 <h1>Your Property.<br> Our Expertise.</h1>
                 <p>Premium equipment, trusted support, and machinery built for real work.</p>
                 <div class="hero-actions">
-                    <a class="btn btn-primary" href="#detail">View Details</a>
+                    <a class="btn btn-primary" href="#specs">View Specs</a>
                     <a class="btn btn-light" href="#contact">Contact Us</a>
                 </div>
             </div>
@@ -1140,6 +1248,52 @@
             </div>
         </section>
 
+        <section class="specs-section section" id="specs">
+            <div class="container">
+                <div class="section-head reveal">
+                    <div>
+                        <p class="eyebrow">Captain 2532 specs</p>
+                        <h2>Compact footprint. Real tractor capability.</h2>
+                    </div>
+                    <p class="lead">Core specifications for buyers comparing sub-compact tractors for acreage, snow, loader work, and property maintenance.</p>
+                </div>
+
+                <div class="spec-metrics reveal" aria-label="Captain 2532 key specifications">
+                    <div class="spec-metric"><span>Engine</span><strong>Mitsubishi 3-cylinder diesel</strong></div>
+                    <div class="spec-metric"><span>Power</span><strong>25 HP</strong></div>
+                    <div class="spec-metric"><span>Rear lift</span><strong>675 kg</strong></div>
+                    <div class="spec-metric"><span>PTO</span><strong>540/2000 PTO</strong></div>
+                </div>
+
+                <div class="comparison-card reveal">
+                    <div class="comparison-scroll">
+                        <table class="comparison-table" aria-label="Captain 2532 comparison table">
+                            <thead>
+                                <tr>
+                                    <th>Feature</th>
+                                    <th class="highlight">Captain 2532</th>
+                                    <th>Kubota BX23S</th>
+                                    <th>John Deere 1025R</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr><td>Engine</td><td class="highlight">Mitsubishi 3-cylinder diesel</td><td>Kubota 3-cylinder diesel</td><td>Yanmar 3-cylinder diesel</td></tr>
+                                <tr><td>Power</td><td class="highlight">25 HP</td><td>21.6 HP</td><td>23.9 HP</td></tr>
+                                <tr><td>4-wheel drive</td><td class="highlight">Standard</td><td>Standard</td><td>Standard</td></tr>
+                                <tr><td>Rear lifting capacity</td><td class="highlight">675 kg</td><td>309 kg</td><td>345 kg</td></tr>
+                                <tr><td>Transmission</td><td class="highlight">3-range hydrostatic</td><td>HST</td><td>HST</td></tr>
+                                <tr><td>Power take-off</td><td class="highlight">540/2000 PTO</td><td>Standard PTO</td><td>Standard PTO</td></tr>
+                                <tr><td>Operating weight</td><td class="highlight">1,105 kg</td><td>712 kg</td><td>706 kg</td></tr>
+                                <tr><td>Tire options</td><td class="highlight">Industrial / F-Agri / Turf</td><td>Limited</td><td>Limited</td></tr>
+                                <tr><td>Local financing</td><td class="highlight">Available</td><td>Limited</td><td>Dealer programs</td></tr>
+                                <tr><td>Pricing</td><td class="highlight">Contact for Quote</td><td>Contact dealer</td><td>Contact dealer</td></tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </section>
+
         <section class="section" id="services">
             <div class="container">
                 <div class="section-head reveal">
@@ -1216,6 +1370,7 @@
                     <h3>Navigation</h3>
                     <ul>
                         <li><a href="#home">Home</a></li>
+                        <li><a href="#specs">Specs</a></li>
                         <li><a href="#services">Services</a></li>
                         <li><a href="#contact">Contact Us</a></li>
                     </ul>
