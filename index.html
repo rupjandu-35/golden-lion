@@ -363,21 +363,23 @@
             color: var(--white);
             padding: 0;
             position: relative;
-            overflow: hidden;
+            overflow: visible;
         }
 
         .cinematic-scroll-layout {
             display: grid;
-            grid-template-columns: minmax(0, 52vw) minmax(420px, 1fr);
+            grid-template-columns: minmax(320px, 45vw) minmax(420px, 1fr);
             gap: 0;
-            min-height: 280vh;
+            min-height: 300vh;
             position: relative;
+            align-items: start;
         }
 
         .sticky-video-panel {
             position: sticky;
             top: 0;
             height: 100vh;
+            align-self: start;
             overflow: hidden;
             pointer-events: none;
             background: var(--black);
@@ -405,7 +407,7 @@
             display: grid;
             align-content: start;
             gap: 36vh;
-            min-height: 280vh;
+            min-height: 300vh;
             padding: 30vh min(7vw, 96px) 34vh;
             background:
                 linear-gradient(90deg, rgba(15, 17, 18, 0.94), var(--black) 24%),
@@ -1037,7 +1039,7 @@
         <section class="cinematic-scroll-section" id="intro">
             <div class="cinematic-scroll-layout">
                 <div class="sticky-video-panel" aria-hidden="true">
-                    <video autoplay muted loop playsinline preload="metadata">
+                    <video preload="auto" playsinline muted autoplay loop>
                         <source src="assets/who-we-serve-bg.mp4" type="video/mp4">
                     </video>
                 </div>
