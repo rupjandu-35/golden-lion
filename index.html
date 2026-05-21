@@ -186,11 +186,13 @@
                 </div>
                 <div class="detail-grid">
                     <div class="gallery reveal">
-                        <div class="gallery-main"><img id="detail-main-image" src="assets/captain-2532-field.jpeg" alt="2026 Captain 2532 tractor with loader in a farm field"></div>
+                        <button class="gallery-main gallery-trigger" type="button" aria-label="Enlarge 2026 Captain 2532 tractor image">
+                            <img id="detail-main-image" src="assets/captain-2532-field.jpeg" alt="2026 Captain 2532 tractor with loader in a farm field">
+                        </button>
                         <div class="gallery-side">
-                            <div><img src="assets/captain-2532-black.jpeg" alt="Captain 2532 black tractor side profile"></div>
-                            <div><img src="assets/captain-2532-snowblower-close.png" alt="Captain 2532 tractor clearing snow with snowblower attachment"></div>
-                            <div><img src="assets/captain-2532-snowblower-wide.png" alt="Captain 2532 tractor blowing snow across a driveway"></div>
+                            <button class="gallery-trigger" type="button" aria-label="Enlarge Captain 2532 black tractor side profile image"><img src="assets/captain-2532-black.jpeg" alt="Captain 2532 black tractor side profile"></button>
+                            <button class="gallery-trigger" type="button" aria-label="Enlarge Captain 2532 snowblower image"><img src="assets/captain-2532-snowblower-close.png" alt="Captain 2532 tractor clearing snow with snowblower attachment"></button>
+                            <button class="gallery-trigger" type="button" aria-label="Enlarge Captain 2532 snow driveway image"><img src="assets/captain-2532-snowblower-wide.png" alt="Captain 2532 tractor blowing snow across a driveway"></button>
                         </div>
                     </div>
                     <aside class="detail-panel reveal">
@@ -295,24 +297,27 @@
                         <div class="contact-item"><i class="fa-solid fa-clock"></i><div><strong>Hours</strong><br>Monday to Sunday &mdash; 10 AM to 6 PM</div></div>
                     </div>
                     <div class="map-placeholder">
-                        <div>
-                            <i class="fa-solid fa-map-location-dot" style="font-size:2rem;color:var(--gold-light);margin-bottom:10px;"></i>
-                            <strong>Google Maps Placeholder</strong>
-                            <p>Replace with the dealership map embed.</p>
-                        </div>
+                        <iframe
+                            class="google-map"
+                            title="Golden Lion Tractors Ltd location on Google Maps"
+                            src="https://www.google.com/maps?q=18218%20Hurontario%20Street%2C%20Caledon%2C%20ON&output=embed"
+                            loading="lazy"
+                            referrerpolicy="no-referrer-when-downgrade"></iframe>
                     </div>
                 </aside>
-                <form class="form-card reveal" id="contact-form">
+                <form class="form-card reveal" id="contact-form" action="https://formsubmit.co/rupjandu@gmail.com" method="POST">
+                    <input type="hidden" name="_subject" value="New Golden Lion Tractors website request">
+                    <input type="hidden" name="_template" value="table">
+                    <input type="hidden" name="_captcha" value="false">
                     <p class="eyebrow">Speak with our team</p>
                     <div class="form-grid">
-                        <div class="field"><label for="name">Name</label><input id="name" type="text" required></div>
-                        <div class="field"><label for="email">Email</label><input id="email" type="email" required></div>
-                        <div class="field"><label for="phone">Phone</label><input id="phone" type="tel"></div>
-                        <div class="field"><label for="interest">Tractor Interest</label><input id="interest" type="text" placeholder="Model, service, parts, or quote"></div>
-                        <div class="field full"><label for="message">Message</label><textarea id="message" placeholder="Tell us what kind of equipment or support you need."></textarea></div>
+                        <div class="field"><label for="name">Name</label><input id="name" name="name" type="text" autocomplete="name" required></div>
+                        <div class="field"><label for="email">Email</label><input id="email" name="email" type="email" autocomplete="email" required></div>
+                        <div class="field"><label for="phone">Phone</label><input id="phone" name="phone" type="tel" autocomplete="tel"></div>
+                        <div class="field"><label for="interest">Tractor Interest</label><input id="interest" name="tractor_interest" type="text" placeholder="Model, service, parts, or quote"></div>
+                        <div class="field full"><label for="message">Message</label><textarea id="message" name="message" placeholder="Tell us what kind of equipment or support you need."></textarea></div>
                         <button class="btn btn-primary full" type="submit">Send Request</button>
                     </div>
-                    <p id="form-status" style="display:none;color:#286347;font-weight:900;margin-top:16px;">Thanks. This form is ready to connect to a backend.</p>
                 </form>
             </div>
         </section>
@@ -348,6 +353,11 @@
             <div class="copyright">&copy; 2026 Golden Lion Tractors Ltd. All rights reserved.</div>
         </div>
     </footer>
+
+    <div class="image-lightbox" id="image-lightbox" aria-hidden="true">
+        <button class="lightbox-close" type="button" aria-label="Close enlarged image"><i class="fa-solid fa-xmark"></i></button>
+        <img id="lightbox-image" src="" alt="">
+    </div>
 
     <script src="assets/main.js"></script>
 </body>
