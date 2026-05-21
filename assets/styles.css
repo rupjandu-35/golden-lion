@@ -12,6 +12,7 @@
     --shadow: 0 24px 70px rgba(15, 17, 18, 0.16);
     --radius: 22px;
     --font-main: "Manrope", -apple-system, BlinkMacSystemFont, "SF Pro Text", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    --font-display: "Orbitron", "Manrope", -apple-system, BlinkMacSystemFont, "SF Pro Display", Arial, sans-serif;
 }
 
 * {
@@ -115,10 +116,11 @@ body.is-scrolled .site-header {
 .brand-name {
     display: grid;
     color: var(--black);
+    font-family: var(--font-display);
     font-weight: 900;
-    font-size: 1.12rem;
+    font-size: 1rem;
     line-height: 0.98;
-    letter-spacing: 0;
+    letter-spacing: 0.02em;
     text-transform: uppercase;
 }
 
@@ -128,7 +130,7 @@ body.is-scrolled .brand-name {
 
 .brand-name span:last-child {
     color: var(--gold);
-    font-size: 0.9rem;
+    font-size: 0.78rem;
     letter-spacing: 0.04em;
 }
 
@@ -137,8 +139,11 @@ body.is-scrolled .brand-name {
     align-items: center;
     gap: 34px;
     color: rgba(15, 17, 18, 0.78);
-    font-size: 0.96rem;
+    font-family: var(--font-display);
+    font-size: 0.82rem;
     font-weight: 800;
+    letter-spacing: 0.03em;
+    text-transform: uppercase;
 }
 
 body.is-scrolled .nav-links {
@@ -178,6 +183,7 @@ body.is-scrolled .nav-links {
     min-width: 172px;
     min-height: 58px;
     border-radius: 999px;
+    font-family: var(--font-main);
     font-size: 1rem;
     box-shadow: 0 22px 56px rgba(201, 152, 35, 0.3);
 }
@@ -283,9 +289,9 @@ body.is-scrolled .nav-links {
 h1,
 h2,
 h3 {
-    font-family: var(--font-main);
+    font-family: var(--font-display);
     font-weight: 760;
-    letter-spacing: 0;
+    letter-spacing: 0.01em;
 }
 
 h1 {
@@ -969,7 +975,7 @@ footer li {
     }
 
     .brand-name {
-        font-size: 1rem;
+        font-size: 0.9rem;
     }
 
     .nav-links {
@@ -1060,11 +1066,11 @@ footer li {
     }
 
     .brand-name {
-        font-size: 0.82rem;
+        font-size: 0.72rem;
     }
 
     .brand-name span:last-child {
-        font-size: 0.72rem;
+        font-size: 0.62rem;
     }
 
     h1 {
