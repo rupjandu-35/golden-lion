@@ -450,14 +450,6 @@ h2 {
     align-content: center;
 }
 
-.cinematic-card::before {
-    content: "";
-    width: 56px;
-    height: 2px;
-    background: var(--gold);
-    margin-bottom: 18px;
-}
-
 .cinematic-card h2 {
     font-size: clamp(2.25rem, 3.35vw, 4.45rem);
     line-height: 1.04;
@@ -577,36 +569,6 @@ h2 {
 
 .specs-section .lead {
     color: rgba(255, 255, 255, 0.68);
-}
-
-.spec-metrics {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    gap: 14px;
-    margin-bottom: 42px;
-}
-
-.spec-metric {
-    min-height: 150px;
-    border: 1px solid rgba(255, 255, 255, 0.12);
-    border-radius: 24px;
-    background: rgba(255, 255, 255, 0.055);
-    box-shadow: 0 24px 70px rgba(0, 0, 0, 0.28);
-    padding: 24px;
-    display: grid;
-    align-content: end;
-}
-
-.spec-metric span {
-    color: rgba(255, 255, 255, 0.54);
-    font-size: 0.78rem;
-    font-weight: 700;
-    margin-bottom: 8px;
-}
-
-.spec-metric strong {
-    font-size: clamp(1.45rem, 2.4vw, 2.5rem);
-    line-height: 1;
 }
 
 .comparison-card {
@@ -946,7 +908,6 @@ footer li {
     .value-row,
     .value-row.values-two,
     .value-row.values-three,
-    .spec-metrics,
     .services-grid,
     .related-grid,
     .footer-grid {
@@ -999,7 +960,6 @@ footer li {
     .value-row,
     .value-row.values-two,
     .value-row.values-three,
-    .spec-metrics,
     .services-grid,
     .related-grid,
     .footer-grid,
