@@ -19,6 +19,7 @@ nul
 properties.html
 script.js
 styles.css
+!assets/styles.css
 tensorflow.ex.py
 toronto-skyline.jpg
 
