@@ -661,6 +661,218 @@ h2 {
     overflow-x: auto;
 }
 
+.attachments-section {
+    background:
+        radial-gradient(circle at 92% 8%, rgba(201, 152, 35, 0.16), transparent 28%),
+        linear-gradient(180deg, #fffdf8, var(--paper));
+}
+
+.partner-grid {
+    display: grid;
+    grid-template-columns: minmax(0, 1.12fr) minmax(360px, 0.88fr);
+    gap: 20px;
+    align-items: stretch;
+}
+
+.partner-card {
+    min-height: 100%;
+    border: 1px solid var(--line);
+    border-radius: 26px;
+    background: rgba(255, 255, 255, 0.82);
+    box-shadow: var(--shadow);
+    padding: clamp(22px, 3vw, 34px);
+    display: grid;
+    gap: 22px;
+}
+
+.bercomac-card {
+    background:
+        linear-gradient(135deg, rgba(15, 17, 18, 0.92), rgba(15, 17, 18, 0.76)),
+        radial-gradient(circle at 20% 0%, rgba(239, 210, 122, 0.2), transparent 34%);
+    color: var(--white);
+    border-color: rgba(239, 210, 122, 0.22);
+}
+
+.partner-card-head {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 18px;
+}
+
+.partner-logo {
+    width: auto;
+    height: auto;
+    object-fit: contain;
+}
+
+.bercomac-logo {
+    max-width: min(320px, 62%);
+    max-height: 70px;
+}
+
+.mapleside-logo {
+    max-width: min(260px, 58%);
+    max-height: 82px;
+}
+
+.partner-tag {
+    min-height: 34px;
+    border-radius: 999px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0 13px;
+    background: var(--gold-soft);
+    color: var(--black);
+    font-size: 0.78rem;
+    font-weight: 900;
+    white-space: nowrap;
+}
+
+.bercomac-card .partner-tag {
+    background: rgba(239, 210, 122, 0.16);
+    color: var(--gold-light);
+    border: 1px solid rgba(239, 210, 122, 0.28);
+}
+
+.partner-copy h3 {
+    font-size: clamp(1.65rem, 2.5vw, 2.6rem);
+    line-height: 1.04;
+    margin-bottom: 10px;
+}
+
+.partner-copy p {
+    color: var(--muted);
+    max-width: 720px;
+}
+
+.bercomac-card .partner-copy p {
+    color: rgba(255, 255, 255, 0.72);
+}
+
+.bercomac-products {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 16px;
+}
+
+.attachment-product {
+    border: 1px solid rgba(239, 210, 122, 0.16);
+    border-radius: 22px;
+    background: rgba(255, 255, 255, 0.075);
+    padding: 16px;
+    display: grid;
+    gap: 14px;
+}
+
+.featured-product {
+    grid-column: 1 / -1;
+}
+
+.attachment-product-copy {
+    display: grid;
+    gap: 8px;
+}
+
+.product-type {
+    width: fit-content;
+    min-height: 28px;
+    border-radius: 999px;
+    display: inline-flex;
+    align-items: center;
+    padding: 0 10px;
+    background: rgba(239, 210, 122, 0.14);
+    color: var(--gold-light);
+    font-size: 0.72rem;
+    font-weight: 950;
+    text-transform: uppercase;
+}
+
+.attachment-product h4 {
+    color: var(--white);
+    font-size: clamp(1.1rem, 1.7vw, 1.55rem);
+    line-height: 1.08;
+}
+
+.attachment-product p {
+    color: rgba(255, 255, 255, 0.68);
+    font-size: 0.95rem;
+}
+
+.product-image-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 12px;
+}
+
+.attachment-image {
+    min-height: 220px;
+    border-radius: 20px;
+    overflow: hidden;
+    background: #d8d1c5;
+    box-shadow: 0 24px 60px rgba(0, 0, 0, 0.28);
+}
+
+.attachment-image img {
+    transition: transform 0.35s ease;
+}
+
+.attachment-image:hover img {
+    transform: scale(1.035);
+}
+
+.single-product-image {
+    min-height: 260px;
+}
+
+.mapleside-card {
+    align-content: start;
+}
+
+.mapleside-product-image {
+    min-height: 300px;
+}
+
+.fork-options {
+    border: 1px solid var(--line);
+    border-radius: 20px;
+    background: #fdfbf7;
+    padding: 18px;
+}
+
+.fork-options h4 {
+    font-size: 1.08rem;
+    line-height: 1.2;
+    margin-bottom: 14px;
+}
+
+.fork-options ul {
+    display: grid;
+    gap: 10px;
+}
+
+.fork-options li {
+    list-style: none;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    color: var(--muted);
+    font-weight: 850;
+}
+
+.fork-options i {
+    width: 24px;
+    height: 24px;
+    border-radius: 999px;
+    display: grid;
+    place-items: center;
+    flex: 0 0 auto;
+    background: var(--gold-soft);
+    color: var(--black);
+    font-size: 0.78rem;
+}
+
 .field {
     display: grid;
     gap: 7px;
@@ -994,6 +1206,7 @@ footer li {
     .contact-grid,
     .featured-item,
     .cinematic-scroll-layout,
+    .partner-grid,
     .services-layout {
         grid-template-columns: 1fr;
     }
@@ -1027,6 +1240,10 @@ footer li {
     .related-grid,
     .footer-grid {
         grid-template-columns: repeat(2, 1fr);
+    }
+
+    .bercomac-products {
+        grid-template-columns: 1fr;
     }
 
     h1 {
@@ -1086,6 +1303,29 @@ footer li {
     .footer-grid,
     .form-grid {
         grid-template-columns: 1fr;
+    }
+
+    .partner-card-head,
+    .product-image-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .partner-card-head {
+        display: grid;
+        align-items: start;
+    }
+
+    .bercomac-logo {
+        max-width: 100%;
+    }
+
+    .mapleside-logo {
+        max-width: 100%;
+    }
+
+    .attachment-image {
+        aspect-ratio: 4 / 3;
+        min-height: auto;
     }
 
     .section-head,
