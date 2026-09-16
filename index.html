@@ -379,43 +379,40 @@
             </div>
         </section>
 
-        <section class="section contact-section" id="contact" aria-labelledby="contact-heading">
-            <div class="container">
-                <div class="contact-heading">
+        <section class="section" id="contact">
+            <div class="container contact-grid">
+                <aside class="contact-card reveal">
                     <p class="eyebrow">Contact us</p>
-                    <h2 id="contact-heading">Let&rsquo;s get you moving.</h2>
-                    <p>From your first tractor to your next upgrade, we&rsquo;re here to help.</p>
-                </div>
-                <div class="contact-layout">
-                    <aside class="contact-card">
-                        <p class="eyebrow">Golden Lion Tractors Ltd.</p>
-                        <h3>A conversation starts here.</h3>
-                        <div class="contact-list">
-                            <a class="contact-item" href="tel:+16475190200"><i class="fa-solid fa-phone" aria-hidden="true"></i><div><strong>Dharmpreet Grewal</strong><span>647-519-0200</span></div></a>
-                            <a class="contact-item" href="tel:+16476221754"><i class="fa-solid fa-phone" aria-hidden="true"></i><div><strong>Tejinder Singh</strong><span>647-622-1754</span></div></a>
-                            <a class="contact-item" href="mailto:goldenliontractors@gmail.com"><i class="fa-solid fa-envelope" aria-hidden="true"></i><div><strong>Email our team</strong><span>goldenliontractors@gmail.com</span></div></a>
+                    <h2>Reach out to Golden Lion Tractors Ltd.</h2>
+                    <div class="contact-list">
+                        <div class="contact-item"><i class="fa-solid fa-phone"></i><div><strong>Dharmpreet Grewal</strong><br>647-519-0200</div></div>
+                        <div class="contact-item"><i class="fa-solid fa-phone"></i><div><strong>Tejinder Singh</strong><br>647-622-1754</div></div>
+                        <div class="contact-item"><i class="fa-solid fa-envelope"></i><div><strong>Email</strong><br>goldenliontractors@gmail.com</div></div>
+                        <div class="contact-item"><i class="fa-solid fa-location-dot"></i><div><strong>Address</strong><br>18218 Hurontario Street<br>Caledon, ON</div></div>
+                        <div class="contact-item"><i class="fa-solid fa-clock"></i><div><strong>Hours</strong><br>Monday to Sunday &mdash; 10 AM to 6 PM</div></div>
+                    </div>
+                    <nav class="contact-socials" aria-label="Golden Lion Tractors social media links">
+                        <h3>Connect with us</h3>
+                        <div class="contact-social-links">
+                            <a href="https://www.instagram.com/goldenliontractorsltd/" target="_blank" rel="noopener noreferrer" aria-label="Golden Lion Tractors on Instagram (opens in a new tab)"><i class="fa-brands fa-instagram" aria-hidden="true"></i><span>Instagram</span></a>
+                            <a href="https://www.facebook.com/people/Golden-Lion-Tractors-Ltd/61585162222385/" target="_blank" rel="noopener noreferrer" aria-label="Golden Lion Tractors on Facebook (opens in a new tab)"><i class="fa-brands fa-facebook" aria-hidden="true"></i><span>Facebook</span></a>
                         </div>
-                        <nav class="contact-socials" aria-label="Follow Golden Lion Tractors on social media">
-                            <h3 class="contact-socials-label">Follow us on social</h3>
-                            <p class="contact-socials-description">New arrivals. Tractors at work. Life at Golden Lion.</p>
-                            <div class="contact-social-links">
-                                <a class="contact-social-link contact-social-facebook" href="https://www.facebook.com/people/Golden-Lion-Tractors-Ltd/61585162222385/" target="_blank" rel="noopener noreferrer" aria-label="Golden Lion Tractors on Facebook (opens in a new tab)" title="Facebook">
-                                    <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path fill="currentColor" d="M13.5 22v-9h3l.5-4h-3.5V6.5c0-1.16.32-1.95 2-1.95H17V1.1A20 20 0 0 0 14.5 1C11.55 1 9.5 2.8 9.5 6.1V9h-3v4h3v9z"/></svg>
-                                </a>
-                                <a class="contact-social-link contact-social-instagram" href="https://www.instagram.com/goldenliontractorsltd/" target="_blank" rel="noopener noreferrer" aria-label="Golden Lion Tractors on Instagram (opens in a new tab)" title="Instagram">
-                                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true" focusable="false"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1.15" fill="currentColor" stroke="none"/></svg>
-                                </a>
-                            </div>
-                        </nav>
-                    </aside>
-                <form class="form-card" id="contact-form" action="https://api.web3forms.com/submit" method="POST">
+                    </nav>
+                    <div class="map-placeholder">
+                        <iframe
+                            class="google-map"
+                            title="Golden Lion Tractors Ltd location on Google Maps"
+                            src="https://www.google.com/maps?q=18218%20Hurontario%20Street%2C%20Caledon%2C%20ON&output=embed"
+                            loading="lazy"
+                            referrerpolicy="no-referrer-when-downgrade"></iframe>
+                    </div>
+                </aside>
+                <form class="form-card reveal" id="contact-form" action="https://api.web3forms.com/submit" method="POST">
                     <input type="hidden" name="access_key" value="a8fc09ca-d005-46bc-b796-993bd4e41b48">
                     <input type="hidden" name="subject" value="New Golden Lion Tractors website request">
                     <input type="hidden" name="from_name" value="Golden Lion Tractors Website">
                     <input type="hidden" name="redirect" value="https://rupjandu-35.github.io/golden-lion/#contact">
-                    <p class="eyebrow">Make an inquiry</p>
-                    <h3>How can we help?</h3>
-                    <p class="contact-form-intro">Tell us what you need. Our team will help you find the right equipment and support.</p>
+                    <p class="eyebrow">Speak with our team</p>
                     <div class="form-grid">
                         <div class="field"><label for="name">Name</label><input id="name" name="name" type="text" autocomplete="name" required></div>
                         <div class="field"><label for="email">Email</label><input id="email" name="email" type="email" autocomplete="email" required></div>
@@ -425,19 +422,6 @@
                         <button class="btn btn-primary full" type="submit">Send Request</button>
                     </div>
                 </form>
-                    <div class="contact-visit">
-                        <div class="contact-visit-details">
-                            <p class="eyebrow">Come see us</p>
-                            <h3>Visit us in Caledon.</h3>
-                            <p>18218 Hurontario Street<br>Caledon, ON</p>
-                            <p class="contact-hours">Monday to Sunday <span>10 AM &ndash; 6 PM</span></p>
-                            <a class="contact-directions" href="https://www.google.com/maps/search/?api=1&query=18218+Hurontario+Street+Caledon+ON" target="_blank" rel="noopener noreferrer">Get directions <span aria-hidden="true">&nearr;</span></a>
-                        </div>
-                        <div class="map-placeholder">
-                            <iframe class="google-map" title="Golden Lion Tractors Ltd location on Google Maps" src="https://www.google.com/maps?q=18218%20Hurontario%20Street%2C%20Caledon%2C%20ON&output=embed" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-                        </div>
-                    </div>
-                </div>
             </div>
         </section>
     </main>
