@@ -1095,49 +1095,65 @@ h2 {
 }
 
 .contact-socials {
-    margin-top: 24px;
-    padding-top: 22px;
-    border-top: 1px solid var(--line);
+    grid-column: 1 / -1;
+    padding: clamp(32px, 5vw, 56px) 24px;
+    border: 1px solid var(--line);
+    border-radius: var(--radius);
+    background: #f0f0ee;
+    text-align: center;
 }
 
 .contact-socials-label {
-    margin-bottom: 12px;
+    margin: 0 0 16px;
     color: var(--ink);
-    font-size: 0.9rem;
-    font-weight: 700;
+    font-size: clamp(1.8rem, 4vw, 2.75rem);
+    font-weight: 800;
+    line-height: 1.15;
+}
+
+.contact-socials-description {
+    max-width: 600px;
+    margin: 0 auto 28px;
+    color: var(--muted);
+    font-size: 1.05rem;
+    line-height: 1.7;
 }
 
 .contact-social-links {
     display: flex;
     flex-wrap: wrap;
-    gap: 12px;
+    justify-content: center;
+    gap: 24px;
 }
 
 .contact-social-link {
     display: inline-flex;
     align-items: center;
     justify-content: center;
-    gap: 10px;
-    min-height: 46px;
-    padding: 10px 16px;
-    border: 1px solid var(--line);
-    border-radius: 12px;
-    background: var(--white);
-    color: var(--ink);
-    font-size: 0.9rem;
-    font-weight: 600;
-    transition: background-color 0.2s ease, border-color 0.2s ease;
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    color: #fff;
+    box-shadow: 0 6px 16px rgba(15, 17, 18, 0.15);
+    transition: box-shadow 0.2s ease;
+}
+
+.contact-social-facebook {
+    background: #1877f2;
+}
+
+.contact-social-instagram {
+    background: linear-gradient(35deg, #feda75, #fa7e1e 25%, #d62976 50%, #962fbf 75%, #4f5bd5);
 }
 
 .contact-social-link i {
-    color: var(--gold);
-    font-size: 1.3rem;
+    color: #fff;
+    font-size: 42px;
 }
 
 .contact-social-link:hover,
 .contact-social-link:focus-visible {
-    border-color: var(--gold);
-    background: var(--gold-soft);
+    box-shadow: 0 0 0 5px #fff, 0 8px 24px rgba(15, 17, 18, 0.25);
 }
 
 .contact-social-link:focus-visible {
